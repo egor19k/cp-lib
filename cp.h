@@ -14,7 +14,7 @@
 #define classed(T) typedef class T T; class T
 
 #define method(ret, name, ...) ret (*name)(##__VA_ARGS__)
-#define CALL(obj, m, ...) (obj)->m(obj, ##__VA_ARGS__)
+#define CALL(obj, m, ...) (obj)->m(##__VA_ARGS__)
 #define this self
 
 #ifndef ARRAY_SIZE
