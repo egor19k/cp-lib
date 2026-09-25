@@ -16,7 +16,7 @@
 #define method(ret, name, ...) ret (*name)(##__VA_ARGS__)
 #define CALL(obj, m, ...) (obj)->m(##__VA_ARGS__)
 #define this self
-#define defmethod(ret, name, obj, ...) ret (*name)((obj) *self, ##__VA_ARGS__)
+#define defmethod(ret, name, obj, ...) ret (*name)((obj) self, ##__VA_ARGS__)
 #define defCALL(obj, m, ...) (obj)->m((obj), ##__VA_ARGS__)
 
 #ifndef ARRAY_SIZE
