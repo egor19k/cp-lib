@@ -12,7 +12,6 @@
 
 #define class struct
 #define classed(T) typedef class T T; class T
-
 #define method(ret, name, ...) ret (*name)(##__VA_ARGS__)
 #define CALL(obj, m, ...) (obj)->m(##__VA_ARGS__)
 #define this self
