@@ -12,7 +12,7 @@
 #define extends(T, name) T name
 #define vtable(T) struct T##Vtable
 #define vtabled(T) typedef struct T##Vtable T##Vtable; struct T##Vtable
-#define vtread(obj, T, m, ...) (as(T, obj)->vptr->m(as(T, obj), ##__VA_ARGS__))
+#define vcall(obj, T, m, ...) (as(T, obj)->vptr->m(as(T, obj), ##__VA_ARGS__))
 #define del(p) do { free(p); (p) = NULL; } while(0)
 
 #define class struct
