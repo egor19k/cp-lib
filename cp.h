@@ -9,7 +9,7 @@
 #define new_array(T,n) ((T*)malloc((n) * sizeof(T)))
 #define new0_array(T,n) ((T*)calloc((n), sizeof(T)))
 #define as(Base, obj) ((Base*)(obj))
-#define extends(Base) Base base;
+#define extends(T, name) T name;
 #define vtable(T) struct T##Vtable
 #define del(p) do { free(p); (p) = NULL; } while(0)
 
