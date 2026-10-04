@@ -8,8 +8,8 @@
 #define new0(T) ((T*)calloc(1, sizeof(T)))
 #define new_array(T,n) ((T*)malloc((n) * sizeof(T)))
 #define new0_array(T,n) ((T*)calloc((n), sizeof(T)))
-#define as(Base, obj) ((Base*)(obj))
-#define extends(T, name) T name;
+#define as(T, obj) ((T*)(obj))
+#define extends(T, name) T name
 #define vtable(T) struct T##Vtable
 #define vtread(obj, T, m, ...) (as(T, obj)->vptr->m(as(T, obj), ##__VA_ARGS__))
 #define del(p) do { free(p); (p) = NULL; } while(0)
