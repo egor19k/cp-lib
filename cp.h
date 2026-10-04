@@ -8,7 +8,7 @@
 #define new0(T) ((T*)calloc(1, sizeof(T)))
 #define new_array(T,n) ((T*)malloc((n) * sizeof(T)))
 #define new0_array(T,n) ((T*)calloc((n), sizeof(T)))
-#define del(p) free(p)
+#define del(p) do { free(p); (p) = NULL; } while(0)
 
 #define class struct
 #define classed(T) typedef class T T; class T
